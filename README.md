@@ -5,7 +5,7 @@
 You can install the package via composer:
 
 ```bash
-composer require binarcode/laravel-restable
+composer require talentd1223/laravel-restable
 ```
 
 ## Prerequisite
@@ -16,8 +16,8 @@ To associate search with a model, the model must implement the following interfa
 
 namespace App\Models;
 
-use BinarCode\LaravelRestable\HasRestable;
-use BinarCode\LaravelRestable\Restable;
+use talentd1223\LaravelRestable\HasRestable;
+use talentd1223\LaravelRestable\Restable;
 use Illuminate\Database\Eloquent\Model;
 
 class YourModel extends Model implements Restable
@@ -80,7 +80,7 @@ Matching by a specific column is a more strict type of search. You should define
 with the type:
 
 ```php
-use BinarCode\LaravelRestable\Types;
+use talentd1223\LaravelRestable\Types;
 
 class Dream extends Model implements Restable
 {
@@ -173,7 +173,7 @@ class Dream extends Model implements Restable
 Instead of using the default methods for filtering, you can have your own:
 
 ```php
-use BinarCode\LaravelRestable\Filters\MatchFilter;class Dream extends Model implements Restable
+use talentd1223\LaravelRestable\Filters\MatchFilter;class Dream extends Model implements Restable
 {
     use HasRestable;
 
@@ -194,7 +194,7 @@ So you can now match by `something` property, and implement your own search into
 You can also create your own `Match` filter class, and implement the search there:
 
 ```php
-use BinarCode\LaravelRestable\Filters\MatchFilter;
+use talentd1223\LaravelRestable\Filters\MatchFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
@@ -227,7 +227,7 @@ class Dream extends Model implements Restable
 }
 ```
 
-The same you could do for `Search` or `Sort` filter, by extending the `BinarCode\LaravelRestable\Filters\SearchableFilter` or `BinarCode\LaravelRestable\Filters\SortableFilter` filters.
+The same you could do for `Search` or `Sort` filter, by extending the `talentd1223\LaravelRestable\Filters\SearchableFilter` or `talentd1223\LaravelRestable\Filters\SortableFilter` filters.
 
 ## Testing
 
